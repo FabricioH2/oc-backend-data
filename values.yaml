@@ -1,4 +1,4 @@
-name: backend-data
+name: oc-backend-data
 namespace: ffisa-dev
 
 image:
