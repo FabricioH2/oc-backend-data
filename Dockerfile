@@ -1,7 +1,6 @@
 FROM python:3.11-slim
 WORKDIR /app
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install flask==3.0.0 pymongo==4.6.0
 COPY app.py .
 EXPOSE 3001
 CMD ["python", "app.py"]

@@ -1,0 +1,34 @@
+name: backend-data
+namespace: ffisa-dev
+
+image:
+  repository: fabricioph2/oc-backend-data
+  tag: 1
+
+replicas: 1
+
+resources:
+  requests:
+    cpu: "200m"
+    memory: "256Mi"
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+
+service:
+  enabled: true
+  port: 80
+  targetPort: 3001
+
+route:
+  enabled: false
+
+hpa:
+  enabled: false
+
+statefulset:
+  enabled: false
+
+env:
+  - name: MONGO_URI
+    value: "mongodb://database:27017/comments"
