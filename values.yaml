@@ -18,7 +18,7 @@ resources:
 service:
   enabled: true
   port: 80
-  targetPort: 3001
+  targetPort: 3005
 
 route:
   enabled: false
@@ -31,4 +31,9 @@ statefulset:
 
 env:
   - name: MONGO_URI
-    value: "mongodb://database:27017/comments"
+    value: "mongodb://oc-database:27017/comments_db"
+  - name: PORT
+    value: "3005"
+
+networkPolicies:
+  enabled: true
