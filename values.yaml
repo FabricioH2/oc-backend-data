@@ -3,7 +3,7 @@ namespace: ffisa-dev
 
 image:
   repository: fabricioph2/oc-backend-data
-  tag: 1
+  tag: 6
 
 replicas: 1
 
